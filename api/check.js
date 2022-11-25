@@ -40,6 +40,8 @@ module.exports = async (req, res) => {
         res.status(400).send({ 'error': 'No token provided' })
         return
     }
+    
+    console.log("token: " + token)
 
     getTokenResponse(token)
         .then(data => {
