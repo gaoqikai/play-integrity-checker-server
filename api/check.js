@@ -1,49 +1,22 @@
-import { google } from "googleapis";
-import * as jose from "node-jose"
-const playintegrity = google.playintegrity('v1');
-
-
-const packageName = process.env.PACKAGE_NAME
-const privatekey = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
-
-
-async function getTokenResponse(token) {
-
-    let jwtClient = new google.auth.JWT(
-        privatekey.client_email,
-        null,
-        privatekey.private_key,
-        ['https://www.googleapis.com/auth/playintegrity']);
-
-    google.options({ auth: jwtClient });
-
-    const res = await playintegrity.v1.decodeIntegrityToken(
-        {
-            packageName: packageName,
-            requestBody:{
-                "integrityToken": token
-            }
-        }
-
-    );
-
-
-    console.log(res.data.tokenPayloadExternal);
-
-    return res.data.tokenPayloadExternal
-}
+import * as jose from "jose"
 
 async function decrypt(token){
-    
-    let decrypt_key = "QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig=";
-    let keystore = jose.JWK.createKeyStore();
-    await keystore.add(await jose.JWK.asKey(decrypt_key));
-    let output = jose.parse(token);
-    // let decrypted = await output.perform(keystore);
-    // let claims = Buffer.from(decrypted.plaintext).toString();
+    console.log("token: "+token);
+    let decrypt_key = Buffer.from("QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig=", "base64");
+    const { plaintext, protectedHeader } = await jose.compactDecrypt(token, decrypt_key);
+    var jws = new TextDecoder().decode(plaintext);
+    console.log("jws: "+jws);
 
-    console.log(output);
-    return output;
+    const verify_key = `-----BEGIN PUBLIC KEY-----
+    MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdTrgi9WFM6mZ/SH3AMb3D0nPWIM+EA2pQO9F3tgmOjmZkX5vpTh0rPWi5uPvnpvjFbeC5d0QA1GP2lBJwv8+xg==
+    -----END PUBLIC KEY-----`;
+    const algorithm = 'ES256'
+    const ecPublicKey = await jose.importSPKI(verify_key, algorithm)
+    const { payload, protectedHeader2 } = await jose.compactVerify(jws, ecPublicKey);
+    let result = new TextDecoder().decode(payload);
+
+    console.log("payload: "+result)
+    return result;
 }
 
 module.exports = async (req, res) => {
