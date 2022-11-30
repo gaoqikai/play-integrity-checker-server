@@ -1,10 +1,11 @@
 import { google } from "googleapis";
-import {jose} from "node-jose"
+import * as jose from "node-jose"
 const playintegrity = google.playintegrity('v1');
 
 
 const packageName = process.env.PACKAGE_NAME
 const privatekey = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
+const decryptKey = "QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig="
 
 
 async function getTokenResponse(token) {
@@ -33,6 +34,12 @@ async function getTokenResponse(token) {
     return res.data.tokenPayloadExternal
 }
 
+async function decrypt(token){
+    var result = jose.JWE.createDecrypt(decryptKey).decrypt(token);
+    console.log(result);
+    return result;
+}
+
 module.exports = async (req, res) => {
 
     const { token = 'none' } = req.query
@@ -44,7 +51,7 @@ module.exports = async (req, res) => {
     
     console.log("token: " + token)
 
-    getTokenResponse(token)
+    decrypt(token)
         .then(data => {
             res.status(200).send(data)
             return

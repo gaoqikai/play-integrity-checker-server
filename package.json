@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "googleapis": "^105.0.0",
-    "patch-package": "^6.4.7"
+    "patch-package": "^6.4.7",
+    "node-jose": "2.1.1"
   }
 }
