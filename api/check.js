@@ -36,8 +36,8 @@ async function getTokenResponse(token) {
 async function decrypt(token){
     
     let decrypt_key = "QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig=";
-    // let keystore = jose.JWK.createKeyStore();
-    // await keystore.add(await jose.JWK.asKey(decrypt_key));
+    let keystore = jose.JWK.createKeyStore();
+    await keystore.add(await jose.JWK.asKey(decrypt_key));
     let output = jose.parse(token);
     // let decrypted = await output.perform(keystore);
     // let claims = Buffer.from(decrypted.plaintext).toString();
