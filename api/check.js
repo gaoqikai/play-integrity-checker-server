@@ -5,7 +5,6 @@ const playintegrity = google.playintegrity('v1');
 
 const packageName = process.env.PACKAGE_NAME
 const privatekey = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
-const decryptKey = "QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig="
 
 
 async function getTokenResponse(token) {
@@ -35,9 +34,15 @@ async function getTokenResponse(token) {
 }
 
 async function decrypt(token){
-    var result = jose.JWE.createDecrypt(decryptKey).decrypt(token);
-    console.log(result);
-    return result;
+    let decrypt_key = "QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig=";
+    let keystore = jose.JWK.createKeyStore();
+    await keystore.add(await jose.JWK.asKey(decrypt_key, "private"));
+    let output = jose.parse(token);
+    let decrypted = await output.perform(keystore);
+    let claims = Buffer.from(decrypted.plaintext).toString();
+
+    console.log(claims);
+    return claims;
 }
 
 module.exports = async (req, res) => {
