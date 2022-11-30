@@ -1,0 +1,32 @@
+CV6eU397bLv5LtRmfNENvgggJ8nF6J1Z7hAiM_W-_Lyaxzytkqv2dFaTdtI-1e5XBHIqxYVKPi0uqmfP4grfUpEN-7kaifAFtkRD1JNBArjq6l0ztOz_KrpkM5OMkv1h-W1GeZ4zY8foLVmcmOi7AuvU46O178LjF6gV2_Y5wS2UacBdKR9hlmGILlDd2yuYGSuhM5_MXvMDxv2f15UZKJw_ijC319GXWrHx3G_ISXnB-NCKdODsjh3W8u3_FFJ8AAsAcKzSTGtFXQ4CriLs1cE0XYUU4-2bWZGjTCIx6Rwiu5E2ghmnBF6fgNX9eVqstvU1pNjfJjnbOv0OHVeP7DLR9YNTBBzHhDSJdpdOtCYqNwWVzOJz3msFB8_AJuzXOmO6cza9_MiGaBD-lHstdADBPEDaNa6KHEMP12j_1nMcTTyrIRtu2Z687XTqPEAWuMtkH12iupUFnnG9WkjeRedeq82zLHi0yiBwHjVoFEPLCCeT6qAuD11nHHkNWjcVAaHHbevMlYHjYjjKeg6A0OjBUkIX-7o6iOu556vLx1Lc3jh9t9RtaYcSZcPVBZjydSPIFpN659foV7IZ3BlR-sARKP4ve2xoP7JwjM9vL7mkbkiEVkMC6vIcPqKwdrvo4BGA9pH4EXJBceKJbvlxuSthf9KEeo6Xa7tGgXiS0uYPw.hZD7n4NV1ZGCysHxbiMmsA'
+    },
+    headers: {
+      'x-goog-api-client': 'gdcl/6.0.0 gl-node/18.12.1 auth/8.1.1',
+      'Accept-Encoding': 'gzip',
+      'User-Agent': 'google-api-nodejs-client/6.0.0 (gzip)',
+      Authorization: 'Bearer ya29.c.b0Aa9Vdylz-wqCUCx8Jy3UsOnPAmCyKuTLP-7gc2nOijiKYHqceYyZGGaHr8J-ZS_JEL9Cz-KbTG_qRcUkR_eZwyBB_3AgM0LJfaARNoOaECuXzgPZigKvwZBPhJdeKfgaDDhakHMujI8hPHV98unhzyMvnO2xRtMT9n9ChWtqAOxzcxHkslMVAc2R533Zsvw_Mo6zhWnIruj-ulRoZuL6eNkvtZCiPe8........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................',
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    params: {},
+    validateStatus: [Function (anonymous)],
+    retry: true,
+    body: '{"integrityToken":"eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIn0.wf7C0P70c2t0_8W6aGWMibWrr7iQHRO1jMZ1-kfEv3wHJhjixOG0Fg.QZpnb7mASaktjouP.TcTbU9vzd1T0dwqTJUdAUm0jQC3N7ni27jH7PW21-B22RrkJQQns8nYehn299zknXm7wK-5GnObhWDTb60hk4Ce7EayEacuf7gR6u5lUJPhwsFgrvxJEEgHMkG4jXw5j2J9GEZVq9pqPMM0EgHpr0thujeyMY1bQDxzaQztvwn-w5IMCJoIRW5CTwqMr2FSoT85kNp7zhiCNVvCIZBLt6wiWjRzt7iuLtbhOmgBcfh1qPdRVlQv02JbOKScn-qoTbp0yvG1jSRaZtWrLLpnF0dzq5SQG7DgRfF2rM7Tm-LqRkutSMNhtEgeGh28BJ1QyPaTdw2rogjEkPuhYGWDOKtn8HBqU1RRSiAr1upAU_ikSgLf-beZc9W4E9gXySFwLx_70oO4yQ7NB8VtrGKQRiQZIbR6VWYFeOzjBYen_cnjeOH2oqbTnnqD6JSZz9OGYwK8KDwQRrVU4geJaHC0aP_a64rTIx6PiJtaezMhuBRAjI9oKzcFAY8fxMSTvlETxVLTaDjeHysLlNY6Tnn9do53GwXVBTkXvXPSwuAQZBWfTWCV6eU397bLv5LtRmfNENvgggJ8nF6J1Z7hAiM_W-_Lyaxzytkqv2dFaTdtI-1e5XBHIqxYVKPi0uqmfP4grfUpEN-7kaifAFtkRD1JNBArjq6l0ztOz_KrpkM5OMkv1h-W1GeZ4zY8foLVmcmOi7AuvU46O178LjF6gV2_Y5wS2UacBdKR9hlmGILlDd2yuYGSuhM5_MXvMDxv2f15UZKJw_ijC319GXWrHx3G_ISXnB-NCKdODsjh3W8u3_FFJ8AAsAcKzSTGtFXQ4CriLs1cE0XYUU4-2bWZGjTCIx6Rwiu5E2ghmnBF6fgNX9eVqstvU1pNjfJjnbOv0OHVeP7DLR9YNTBBzHhDSJdpdOtCYqNwWVzOJz3msFB8_AJuzXOmO6cza9_MiGaBD-lHstdADBPEDaNa6KHEMP12j_1nMcTTyrIRtu2Z687XTqPEAWuMtkH12iupUFnnG9WkjeRedeq82zLHi0yiBwHjVoFEPLCCeT6qAuD11nHHkNWjcVAaHHbevMlYHjYjjKeg6A0OjBUkIX-7o6iOu556vLx1Lc3jh9t9RtaYcSZcPVBZjydSPIFpN659foV7IZ3BlR-sARKP4ve2xoP7JwjM9vL7mkbkiEVkMC6vIcPqKwdrvo4BGA9pH4EXJBceKJbvlxuSthf9KEeo6Xa7tGgXiS0uYPw.hZD7n4NV1ZGCysHxbiMmsA"}',
+    responseType: 'json',
+    retryConfig: {
+      currentRetryAttempt: 0,
+      retry: 3,
+      httpMethodsToRetry: [Array],
+      noResponseRetries: 2,
+      statusCodesToRetry: [Array]
+    }
+  },
+  code: 403,
+  errors: [
+    {
+      message: 'You are not authorized to decode the requested integrity token.',
+      domain: 'global',
+      reason: 'forbidden'
+    }
+  ]
+}

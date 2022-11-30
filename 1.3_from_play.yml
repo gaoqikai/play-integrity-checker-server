@@ -1,0 +1,18 @@
+token: eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIn0.XcqA5hIHDs1PCZC9pwbXskp-Nvh_3mrGQ9p5GoTCF2JSQgaIjnlhiQ.0dQr0P--_AUJmeri.oLI0lgt2LRIaP7LkhP2owbWqB06Nlfq7WQ-6281afIV-z79TkwAgvqe1AGsM_D8hIzhtUGJ1beIcHxO-cfpWUJrtt0Gg6Stq4fNAHtNjiLeXkCYlmNssc0m_6ewQQn7rUcSQTj7KWAnVmUmqa6GFcGwkuzubfK0gib2j8miyuz56FOfQMOBhPeh8I3iZ7YnUUl1XAxqyaQd_xa9F_esqyNLGWJpiyW94kIo3SOFBE7_u244kM2RU4JypnDSbb5BOZ_qGKDnHAIlzdtvCUbYdDmPBlNm57X1CPYxP_zca9K9bdp-YkHnnK36WAYod7XC1PZ4DNBLCCpbeWFRM4gdBJzBL3rRH0YqO7BoE52sJgfmJvQizsEnbMhMxMbrytl4a53ETisS_2ie6eYWllnC9ldB2QDhk1Czun-IBSCnekt1nBzTZtNdv4H9pGHMPV9ttIfDGOsRU_FRedoWmnF78gqmw-zOmS-paYHbbnTVI6IJ3GaDPNW_-WS7dx2-h4lD1x7NBZZ99M9lCwyoB9oOkDNRJabfzhEnmwqX763dYOpPZBDcagDClksnJ8VYInchtm70iitdC3RF61wHfESBR2BsZO7z4pcsP_D2NctmU652pKmVdJPaWxa8Lh58Ezv0q3WBO4EgrwEC9BGp-fqY74S-5UY0qEx0dHfjpjiFFStj_Qxj4X9kSg97s4oEjs_4JFOdlX760K502KAsVoqX7zfEHXlDAtrbYNbsXOnrBH2LSyn87LnGl3aKgZzEilAgIsc-O810YHOvx9ieEbjCFrJ0iB2ikE3-j_8DdUMmkdjkWB_CqLqEv-xNGMPRdrwrgpZfvL46AF8QFxQ53fCyzNzRQHNPXKxaKIIbNQ8otBTBBVdSwcr8st6LnANC5ToBHTbIEMMxqaPTKkF4gh9TJTO-Up3UJTbYbY4dpxR8qgNjH4aIROH0w2sskOq4oOS2Nrlv5ixR458mCCzq2zc-_nY51ofEx3UfN8J7dynh-JMwdY0A_jLbIp915kCTutmMdHQKIc02tmPVpgosSCePHK_d3capuhBzUTS-5TqLfwGMVBMpPQR94-U-v9Wj5ULaFHwOpZq1pLkomsUG6SFZzPtSKVnWHIq4Cfaz9o-xwVM4Zdxj6YfA3bdFLqySGt0lghzhT-u90OW8zALhFVF9fZIdbi5wzM38FQqOBAHy2AlhL5ADnyqrtWH3Vzll7nR_XZMU.k6bQFQb_gimgIe-s7TCkQQ
+{
+  requestDetails: {
+    requestPackageName: 'qikai.test.integritycheck',
+    timestampMillis: '1669614002045',
+    nonce: 'Cttn9XKrke40InP0RocQzgeSPhzCETKp5TbTEAlF47dTdTJtyQ=='
+  },
+  appIntegrity: {
+    appRecognitionVerdict: 'PLAY_RECOGNIZED',
+    packageName: 'qikai.test.integritycheck',
+    certificateSha256Digest: [ 'Wugt-TH3WDW_aBpyS6ejXc_JIQvlk7zNJkPOcPJiUaU' ],
+    versionCode: '13'
+  },
+  deviceIntegrity: {
+    deviceRecognitionVerdict: [ 'MEETS_BASIC_INTEGRITY', 'MEETS_DEVICE_INTEGRITY' ]
+  },
+  accountDetails: { appLicensingVerdict: 'LICENSED' }
+}
