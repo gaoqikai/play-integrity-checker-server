@@ -2,14 +2,16 @@ import * as jose from "jose"
 
 async function decrypt(token){
     console.log("\ntoken: "+token);
-    let decrypt_key = Buffer.from("QmeXFVm+1mDk9iSjkpqW1XEDKYqF/1Vb+d8MFpHW+ig=", "base64");
+    dec_key_1 = "4+suAJiXSzjEJaSyX5"
+    dec_key_2 = "+cWm4mzF2L9qQgeR+OpT/zErU="
+    let decrypt_key = Buffer.from(dec_key_1+dec_key_2, "base64");
     const { plaintext, protectedHeader } = await jose.compactDecrypt(token, decrypt_key);
     var jws = new TextDecoder().decode(plaintext);
     console.log("\njws: "+jws);
 
-    const verify_key = `-----BEGIN PUBLIC KEY-----
-    MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdTrgi9WFM6mZ/SH3AMb3D0nPWIM+EA2pQO9F3tgmOjmZkX5vpTh0rPWi5uPvnpvjFbeC5d0QA1GP2lBJwv8+xg==
-    -----END PUBLIC KEY-----`;
+    ver_key_1 = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE80huhlJ2MoqDqwPvIUrclv5cef55vRFEKrqTqXTyEesLULec4LcTgJfMrRxuIZoNQpc"
+    ver_key_2 = "+TBrbORmtwgLvLEHBfA=="
+    const verify_key = "-----BEGIN PUBLIC KEY-----"+ver_key_1+ver_key_2+"-----END PUBLIC KEY-----";
     const algorithm = 'ES256'
     const ecPublicKey = await jose.importSPKI(verify_key, algorithm)
     const { payload, protectedHeader2 } = await jose.compactVerify(jws, ecPublicKey);
